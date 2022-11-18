@@ -1,0 +1,19 @@
+<div *ngIf="serie">
+    <table class="table table-info">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Imagen</th>
+                <th>Puntuacion</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>{{serie.nombre}}</td>
+                <td><img style="width:300px; height:300px" src="{{serie.imagen}}" /></td>
+                <td>{{serie.puntuacion}}</td>
+            </tr>
+        </tbody>
+    </table>
+    <a [routerLink]="['/personajes',serie.idSerie]" class="btn btn-warning">Personajes</a>
+</div>
